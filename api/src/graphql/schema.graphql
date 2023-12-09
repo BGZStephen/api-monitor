@@ -3,3 +3,7 @@ type User {
   firstName: String!
   lastName: String!
 }
+
+type Query {
+  ok: Boolean!
+}

@@ -1,4 +1,8 @@
+import dotenv from "dotenv";
+
 import { parseIntOrThrow } from "../utils/parse-int-or-throw";
+
+dotenv.config();
 
 interface Config {
   PORT: number;
