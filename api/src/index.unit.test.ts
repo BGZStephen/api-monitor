@@ -3,6 +3,7 @@ import { listenerCallback } from ".";
 
 jest.mock("express")
 jest.mock("cors")
+jest.mock("./config")
 
 global.console = {
   log: jest.fn()
