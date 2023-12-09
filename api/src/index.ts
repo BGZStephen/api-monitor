@@ -10,9 +10,12 @@ const port = config.PORT;
 
 app.use(cors());
 app.use(express.json());
-app.use("/graphql", expressMiddleware(apolloServer, {}));
 
-export function listenerCallback() {
+export async function listenerCallback() {
+  await apolloServer.start();
+
+  app.use("/graphql", expressMiddleware(apolloServer, {}));
+
   console.log(`App listening on port ${port}`);
 }
 

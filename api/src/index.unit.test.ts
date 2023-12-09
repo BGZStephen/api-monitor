@@ -5,6 +5,7 @@ import { listenerCallback } from ".";
 jest.mock("express");
 jest.mock("cors");
 jest.mock("./config");
+jest.mock("./graphql/server");
 
 global.console = {
   log: jest.fn(),
