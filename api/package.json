@@ -8,7 +8,9 @@
     "start": "nodemon ./src/index.ts",
     "lint": "eslint ./src/** --fix && prettier -w .",
     "unit-test": "jest -c jest.unit.config.ts",
-    "codegen": "graphql-codegen --config codegen.ts && npm run lint"
+    "codegen": "graphql-codegen --config codegen.ts && npm run copy-graphql-schema && npm run lint",
+    "copy-graphql-schema": "rm ./src/graphql/schema.graphql || true && cp ../schema.graphql ./src/graphql/",
+    "postinstall": "npm run codegen"
   },
   "author": "",
   "license": "ISC",

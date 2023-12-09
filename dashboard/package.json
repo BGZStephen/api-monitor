@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "copy-graphql-schema": "rm ./app/graphql/schema.graphql || true && cp ../schema.graphql ./app/graphql/",
+    "postinstall": "npm run copy-graphql-schema"
   },
   "dependencies": {
     "react": "^18",
