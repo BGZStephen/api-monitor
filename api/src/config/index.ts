@@ -5,5 +5,5 @@ interface Config {
 }
 
 export const config: Config = {
-  PORT: parseIntOrThrow(process.env["PORT"])
-}
+  PORT: parseIntOrThrow(process.env["PORT"]),
+};

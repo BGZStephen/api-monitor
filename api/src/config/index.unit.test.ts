@@ -9,7 +9,7 @@ describe("config", () => {
     const { config } = require(".");
 
     expect(config).toEqual({
-      PORT: 3000
-    })
-  })
-})
+      PORT: 3000,
+    });
+  });
+});

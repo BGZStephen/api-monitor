@@ -3,5 +3,5 @@ export interface Config {
 }
 
 export const config: Config = {
-  PORT: 3000
-}
+  PORT: 3000,
+};
